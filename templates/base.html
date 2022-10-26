@@ -18,7 +18,19 @@
   {% endif %}
 
   {% if USE_GOOGLE_FONTS != False %}
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+            type="text/css"
+        />
+  </noscript>
   {% endif %}
 
   {% if USE_LESS %}
@@ -71,7 +83,19 @@
 
   {% if PLUGINS and ('tipue_search' in PLUGINS or 'pelican.plugins.tipue_search' in PLUGINS) %}
       {% if USE_GOOGLE_FONTS != False %}
-      <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans" rel="stylesheet">
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans&display=swap"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans&display=swap"
+                rel="stylesheet"
+                type="text/css"
+            />
+        </noscript>
       {% endif %}
     <link rel="stylesheet" 
     href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.css" />
